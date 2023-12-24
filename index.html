@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishwarya Samavedhi</title>
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+<link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="website/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p><span class="multiple-text"></span></p>
+                <h1>Hi! I'm Ishwarya, <br> <span>Isha</span> for short. </h1>
+            </div>
+        </div>
+    </div>
+    <!-- ------about------- -->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="website/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My Hometown is St. Louis, MO and I currently go to school 
+                        at Purdue University majoring in Computer Science and minoring in math, 
+                        along with a certificate in Data Science and Entrepreneurship. My coding Journey officially began when 
+                        I was exposed to Scratch.MIT in middle school and made a simple game. 
+                        I realized how empowering it was to create something from scratch, no pun intended. 
+                        It opened my eyes to the endless possibilities in the world of STEM. 
+                        Now, as a CS Major with multiple professional experiences, I'm continually inspired by the impact of STEM. It's not just about coding; 
+                        it's about leveraging technology to solve real-world problems. I'm so excited to be part of a community 
+                        that strives to make a meaningful impact, and I'm eager to continue pushing boundaries and contributing to a future 
+                        where technology plays a crucial role in creating positive change.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                        <p class="tab-links"onclick="opentab('interests')">Interests</p>
+                    </div>
+                    <!-- ------skills------- -->
+                    <div class="tab-contents active-tab" id ="skills">
+                        <ul>
+                            <li>
+                                <p class="skill-title">Programming</p>
+                                <p class="skill-description">Throughout my internships, projects, and classwork, I have mastered Java, C/C++, Python, JavaScript, and x86<br>
+                                My tech skills also expand outside of languages to things like MS Office, macOS, Jupyter, TDD, Github, VS/IntelliJ, Docker and more.</p>
+                            </li>
+                            <li>
+                                <p class="skill-title">Problem-Solver</p>
+                                <p class="skill-description">This has always been a strong-suite for me, as I grew up on finding elegant solutions for puzzles and brain teasers. <br>
+                                I love the intricate challenge of debugging code and am very good at staying determinded and always solving problems.<br>
+                                I view challenges as opportunities for innovation and growth and they are definitely the core of CS.</p>
+                            </li>
+                            <li>
+                                <p class="skill-title">Collaborator</p>
+                                <p class="skill-description">From Hackathons to Group-Projects to Professional Expereince, my collabortion skills have grown exponentially. <br>
+                                I contribute positively to group dynamics and enjoy exchanging ideas and working collectively to solve challenges.<br>
+                            I highly value communication skills and belive they are essential when it come to the tech feild and having successful project outcomes.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- ------education------- -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <p class="skill-title">Purdue University, 2022-2025</p>
+                                <p class="skill-description">B.S. in Computer Science, Minor in Mathematics, Certificate in Entrepreneurship and Data Science <br>
+                                Key Coursework: Data Structures and Algorithms, Computer Architecture, Data Engineering In Python, Programming in C, Problem Solving and Object-Oriented Programming</p>
+                            </li>
+                            <li>
+                                <p class="skill-title">Lafayette High School, 2018-2022</p>
+                                <p class="skill-description">Academic Honors with a 4.336 GPA<br>Key Coursework: AP Computer Science, Fundamentals of App and Game Design, Computer Programming In C++, Intro to Java</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- ------interests------- -->     
+                    <div class="tab-contents" id="interests">
+                        <ul>
+                            <li>
+                                <p class="skill-title">Clubs </p>
+                                <p class="skill-description">I am involved in a diverse range of clubs such as Purdue Student Union Board (PSUB), an event planning club, where I gain leadership and project managemt skills<br>
+                                I'm also in Computer Science Womans Network to beat imposter syndrome and empower other woman in this field, and South Asian Association to keep in touch with my culture.</p>
+                            </li>
+                            <li>
+                                <p class="skill-title">Hobbies</p>
+                                <p class="skill-description">Other hobbies outside of school include Singing, Traveling, playing Video Games (Overwatch, Life is Strange, Mario Kart), and watching Movies/Shows (Favorites: Interstellar, The Social Network, BB).</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--------- services ------>
+<div id="Experience">
+    <div class="expereince">
+        <h1 class="sub-title">My Professional Experience</h1>
+
+        <div class="box-container">
+            <div class="box">
+                <a href="https://www.wayup.com/i-Financial-Services-j-Technology-Early-Internship-Program-Summer-2024-Capital-One-57066505304593/"> 
+                    <img src="website/cap.png" class="logo-img">
+                </a>
+                <span>June-August 2024</span>
+                <h3>Software Engineering Intern</h3>
+            <p>Capital One</p>
+            <p class="description">-Mentorship and training to build 
+                 skills on topics like AWS, the SDLC, and more<br>
+                 -Hands-on technical and soft-skills training through classroom-style learning<br>
+                -Will work on a team on a real-world Capital One project</p>
+            </div>
+
+            <div class="box">
+                <img src="website/rga.png" class="logo-img">
+                <span>June-August 2023</span>
+                <h3>Technical Architecture Structure Intern</h3>
+            <p>Reinsurance Group of America</p>
+            <p class="description">-Worked on the RGA’s SSDLC Status Update website, helping update features (back-end)<br>
+                -Wrote new, Javascript code and logic for a user copying a platform for SSDLC (used TDD)<br>
+                -Updated Static/Dynamic Scans by going through Tableau dashboards and communicating with teams<br>
+                -Tested security platforms for future company software developers and logged my findings</p>
+            </div>
+
+            <div class="box">
+                <img src="website/merck.png" class="logo-img">
+                <span>August 2023-May 2024</span>
+                <h3>Data Science Reaserch Assistant</h3>
+            <p>Merck</p>
+            <p class="description">-Using Agile development methodology to create and connect a Dash web app to the database<br>
+                -Automating the generation of graph/visualizations from data</p>
+            </div>
+
+            <div class="box">
+                <img src="website/danaher.png" class="logo-img">
+                <span>January-May 2024</span>
+                <h3>JUMP Program Fellow </h3>
+            <p>Danaher</p>
+            <p class="description">-Work to prepare and grow STEM and interview skills<br>
+            -Out of classroom development<br></p>
+            </div>
+
+            <div class="box">
+                <img src="website/watlow.png" class="logo-img">
+                <span>June-August 2022</span>
+                <h3>Data Analytic Intern</h3>
+            <p>Watlow Electric Manufactoring</p>
+            <p class="description">-Processed Watlow heater-sensor-readings Excel datasets with Python<br>
+                -Created multiple machine learning models with 85%+ accuracy of failure forecast<br>
+                -Models included Logistic Regression, Naive Bayes, CatBoost, XGBoost, and Random Forest<br>
+                -Analyzed data for correlations using EDA and PCA to also predict results</p>
+            </div>
+
+            <div class="box">
+                <img src="website/beanstalk.png" class="logo-img">
+                <span>June-August 2021</span>
+                <h3>Game Design Intern</h3>
+            <p>Beanstalk Web Solutions</p>
+            <p class="description">-Worked on the development of the game Ancient Allies Tower Defense, now deployed on the Play Store<br>
+                -Used Unity to re-structure parts of the game and Java / VS to code on the in-game pieces<br>
+                -Developed problem-solving and team-building skills while working with a team and professionals</p>
+            </div>
+
+        </div>
+     </div>
+
+</div>
+
+<!--------- projects ------>
+<div id="Projects">
+    <div class="projectss">
+        <h1 class="sub-title">My Projects</h1>
+<div class="portfolio-container">
+    <div class="portfolio-box">
+        <img src="website/portfolio1.jpg" alt="">
+        <div class="portfolio-layer">
+            <h4>Pete's Paradise</h4>
+            <p>A cookie-clicker style game themed around Purdue, made <br>
+            in the HelloWorld hackathon using JS and HTML.</p>
+            <a href="https://petes-paradise.netlify.app/"> <i class='bx bx-link-external' ></i> </a>
+        </div>
+    </div>
+
+    <div class="portfolio-box">
+        <img src="website/portfolio2.jpg" alt="">
+        <div class="portfolio-layer">
+            <h4>Queens Connect</h4>
+            <p>A website that connects women in CS
+                 who are striving towards the same goals. 
+                 It also provides learning resources to support
+                  programmers reach their goals. </p>
+            <a href="https://devpost.com/software/queens-connect?ref_content=contribution-prompt&ref_feature=engagement&ref_medium=email&utm_campaign=contribution-prompt&utm_content=contribution_reminder&utm_medium=email&utm_source=transactional#app-team"> <i class='bx bx-link-external' ></i> </a>
+        </div>
+    </div>
+
+    <div class="portfolio-box">
+        <img src="website/portfolio4.jpg" alt="">
+        <div class="portfolio-layer">
+            <h4>Java Mall Project</h4>
+            <p>This is a comprehensive marketplace platform that facilitates buying and selling items coded in Java with Java IU with a team.</p>
+            <a href="https://docs.google.com/presentation/d/1RmUT4TlhtF7Gju-A05cqHER1Z1ZVMwS5mJt368uGPT8/edit?usp=sharing"> <i class='bx bx-link-external' ></i> </a>
+        </div>
+    </div>
+
+    <div class="portfolio-box">
+        <img src="website/portfolio3.jpg" alt="">
+        <div class="portfolio-layer">
+            <h4>Avalog</h4>
+            <p>This is a Chrome extension developed during a hackathon to assist users in identifying and safeguarding against spam emails using JS/HTML.</p>
+            <a href="https://github.com/IshaSamavedhi/AVA-log"> <i class='bx bx-link-external' ></i> </a>
+        </div>
+    </div>
+
+    <div class="portfolio-box">
+        <img src="website/portfolio5.jpg" alt="">
+        <div class="portfolio-layer">
+            <h4>Compiler Project</h4>
+            <p>Created for a simple procedural language similar to C. It is implemented using Lex, Yacc, and C and can perform various tasks.</p>
+            <a href="#"> <i class='bx bx-link-external' ></i> </a>
+        </div>
+    </div>
+
+    <div class="portfolio-box">
+        <img src="website/portfolio1.jpg" alt="">
+        <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>decription go here</p>
+            <a href="#"> <i class='bx bx-link-external' ></i> </a>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+
+
+
+
+<script>
+    var typed = new Typed('.multiple-text', {
+        strings: ['Software Engineer', 'Team-Builder', 'Fullstack Developer', 'Researcher', 'Computer Scientist', 'Problem-Solver', 'Leader', 'Data Analysis'],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true
+    });
+</script>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+
+
+</body>
+</html>
