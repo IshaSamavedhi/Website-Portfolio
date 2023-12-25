@@ -14,13 +14,15 @@
         <div class="container">
             <nav>
                 <img src="website/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class='bx bxs-x-square' onclick="closemenu()"></i>
                 </ul>
+                <i class='bx bx-menu' onclick="openmenu()" ></i>
             </nav>
             <div class="header-text">
                 <p><span class="multiple-text"></span></p>
@@ -33,7 +35,12 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="website/user.png">
+                    <div class="front">
+                        <img src="website/user.png">
+                    </div>
+                    <div class="back">
+                        <p></p>
+                    </div>
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -94,7 +101,7 @@
                         <ul>
                             <li>
                                 <p class="skill-title">Clubs </p>
-                                <p class="skill-description">I am involved in a diverse range of clubs such as Purdue Student Union Board (PSUB), an event planning club, where I gain leadership and project managemt skills<br>
+                                <p class="skill-description">I am involved in a diverse range of clubs such as Purdue Student Union Board (PSUB), an event planning club, where I gain leadership and project management skills<br>
                                 I'm also in Computer Science Womans Network to beat imposter syndrome and empower other woman in this field, and South Asian Association to keep in touch with my culture.</p>
                             </li>
                             <li>
@@ -237,14 +244,49 @@
     </div>
 
     <div class="portfolio-box">
-        <img src="website/portfolio1.jpg" alt="">
+        <img src="website/portfolio6.jpg" alt="">
         <div class="portfolio-layer">
-            <h4>Web Design</h4>
-            <p>decription go here</p>
-            <a href="#"> <i class='bx bx-link-external' ></i> </a>
+            <h4>This Website</h4>
+            <p>This site, made with HTML/CSS, serves as a digital portfolio and a glimpse into who I am both professionally and personally.</p>
+            <a href="https://github.com/IshaSamavedhi/Website-Portfolio/tree/master"> <i class='bx bx-link-external' ></i> </a>
         </div>
     </div>
 </div>
+
+ <!-- ------contact------- --> 
+ <div id="contact">
+    <div class="contactt">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p class="email-line"><i class='bx bxs-envelope'></i>contact@example.com</p>
+                <p class="phone-line"><i class='bx bxs-phone-call'></i>636-579-7697</p>
+                <div class="social-icons">
+                    <a href=""><i class='bx bxl-linkedin-square'></i></a>
+                    <a href=""><i class='bx bxl-github'></i></a>
+                    <a href=""><i class='bx bxl-instagram'></i></a>
+                    <a href=""><i class='bx bxl-twitter'></i></a>
+                </div>
+                <a href="images/resume.pdf" download class = "btn">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name = "Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright © Ishwarya - All Rights Reserved</p>
+    </div>
+
+ </div>
+
 
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
@@ -278,6 +320,49 @@
     }
 </script>
 
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+sidemenu.style.right = "0";
+    }
+
+    function closemenu() {
+sidemenu.style.right = "-200px";
+    }
+
+
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var aboutCol = document.querySelector('.about-col-1');
+
+    aboutCol.addEventListener('click', function () {
+        aboutCol.classList.toggle('flipped');
+    });
+});
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz_dHlfOeJksLJxUlS5R607aUlgPdOxWADKBSAwE5ungTfdvb6kg0N3i00h9g-68xZo/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully!"
+            setTimeout(function() {
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 
 </body>
