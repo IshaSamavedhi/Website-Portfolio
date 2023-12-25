@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: #080808;
     color: #ffffff;
@@ -89,7 +92,14 @@ nav ul li a:hover::after{
 .about-col-1 img{
     width: 100%;
     border-radius: 15px;
+    border: 2px solid #E8D89E; 
+    transition: transform 0.3s ease-in-out;
 }
+
+.about-col-1 img:hover {
+    transform: scale(1.1); /* Making the image slightly bigger on hover */
+}
+
 
 .about-col-2{
     flex-basis: 60%;
@@ -303,13 +313,38 @@ element-above {
     transform: scale(1.1);
 }
 
+
+.portfolio-container .portfolio-box:nth-child(1):hover .portfolio-layer {
+    background: linear-gradient(rgba(0, 0, 0, .1), #b08203); /* Replace #color1 with your desired color for the first box */
+}
+
+.portfolio-container .portfolio-box:nth-child(2):hover .portfolio-layer {
+    background: linear-gradient(rgba(0, 0, 0, .1), #e653e6); /* Replace #color2 with your desired color for the second box */
+}
+
+.portfolio-container .portfolio-box:nth-child(3):hover .portfolio-layer {
+    background: linear-gradient(rgba(0, 0, 0, .1), #11abdf); /* Replace #color3 with your desired color for the third box */
+}
+
+.portfolio-container .portfolio-box:nth-child(4):hover .portfolio-layer {
+    background: linear-gradient(rgba(0, 0, 0, .1), #000000); /* Replace #color3 with your desired color for the third box */
+}
+
+.portfolio-container .portfolio-box:nth-child(5):hover .portfolio-layer {
+    background: linear-gradient(rgba(0, 0, 0, .1), #531ee3); /* Replace #color3 with your desired color for the third box */
+}
+
+.portfolio-container .portfolio-box:nth-child(6):hover .portfolio-layer {
+    background: linear-gradient(rgba(0, 0, 0, .1), #e3c451); /* Replace #color3 with your desired color for the third box */
+}
+
 .portfolio-box .portfolio-layer {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), #e3c451);
+    background: linear-gradient(rgba(0, 0, 0, .1), #ffffff);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -317,15 +352,18 @@ element-above {
     text-align: center;
     padding: 0 2rem;
     transform: translateY(100%);
-    transition: .5s ease;
+    transition: .5s ease; 
 }
 
 .portfolio-box:hover .portfolio-layer {
     transform: translateY(0);
 }
 
+
+
 .portfolio-layer h4 {
     font-size: 2vw; /* Adjusted for responsiveness */
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), -1px -1px 2px rgb(0, 0, 0), 1px -1px 2px rgb(0, 0, 0), -1px 1px 2px rgb(0, 0, 0);
 }
 
 .portfolio-layer p {
@@ -347,4 +385,221 @@ element-above {
 .portfolio-layer a i {
     font-size: 1.3vw;
     color: rgb(0, 0, 0);
+}
+
+
+/* -----contact------- */
+
+.contact-left {
+    flex-basis: 35%;
+    align-items: center
+}
+
+.contact-left .sub-title {
+    margin-top: 7rem;
+}
+
+
+.contact-right {
+    flex-basis: 60%;
+    margin-top: 6rem;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #E8D89E;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.contact-left .phone-line {
+    margin-right: 60px; /* Adjust the margin for the phone line */
+}
+
+
+.social-icons {
+    margin-top: 30px;
+    margin-left: -24px;
+
+}
+.social-icons a {
+   text-decoration: none;
+   font-size: 30px;
+   margin-right: 10px;
+   color: #ababab;
+   display: inline-block;
+   transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #E8D89E;
+    transform: translateY(-5px);
+}
+
+.btn {
+   display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #E8D89E;
+    border-radius: 5px;
+    transition: 0.3s ease; 
+    margin-top: 35px;
+    margin-right: 40px;
+}
+
+/* Hover effect */
+.btn:hover {
+    background-color: #d8b32c;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #545050;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background:#545050;
+    margin-top: 20px
+}
+
+/* ---css for small screens---- */
+nav .bx {
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(website/phone-background.png);
+    }
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .bx {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #E8D89E;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .bx {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+    .about-col-2 {
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .expereince .box-container .box span {
+        margin-right: 10px;
+    }
+
+    .expereince .box-container .box span {
+        margin-left: 60px;
+    }
+
+    .expereince .box-container .box {
+        border-left: .2rem solid transparent; 
+    }
+
+    .expereince .box-container .box .logo-img {
+        margin-left: 55px;
+    }
+    .portfolio-layer p {
+    font-size: 3px;
+    padding-bottom: 0;
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr; /* Change the grid to a single column */
+    }
+
+    .portfolio-container .portfolio-box {
+        width: 100%; /* Make each box take up the full width */
+        margin-bottom: 2rem; /* Add some spacing between the boxes */
+    }
+
+    .portfolio-layer h4 {
+        font-size: 10vw; /* Adjusted font size for smaller screens */
+    }
+
+    .portfolio-layer p {
+        font-size: 5vw; /* Adjusted font size for smaller screens */
+    }
+
+    .portfolio-layer a i {
+        font-size: 2vw; /* Adjusted font size for smaller screens */
+    }
+}
+
+#msg {
+    color: #ffffff;
+    margin-top: 10px;
+    margin-right: 38px;
+    display: block;
 }
