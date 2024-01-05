@@ -58,7 +58,9 @@ nav ul li a::after{
 }
 nav ul li a:hover::after{
     width: 100%;
+    
 }
+
 .header-text {
     margin-top: 20%;
     font-size: 30px;
@@ -268,7 +270,7 @@ nav ul li a:hover::after{
 .expereince .box-container {
     display: flex;
     align-items: center;
-    justify-content: space-betwwen;
+    justify-content: space-between; /* Change space-betwwen to space-between */
     flex-wrap: wrap;
     padding: 1rem 0;
     padding-left: 3rem;
@@ -277,18 +279,17 @@ nav ul li a:hover::after{
 
 .expereince .box-container .box {
     width: 27rem;
-    margin:2rem 1rem;
+    margin: 2rem 1rem;
     padding-left: 2rem;
-    border-left: .2rem solid #ffffff; 
+    border-left: .2rem solid #ffffff;
     position: relative;
     height: 14rem;
-
-
 }
 
 .expereince .box-container .box span {
     position: absolute;
-    top: -1.25rem; left: 1.5rem;
+    top: -1.25rem;
+    left: 1.5rem;
     font-size: 1rem;
     background: #222;
     color: #ffffff;
@@ -305,32 +306,27 @@ nav ul li a:hover::after{
 
 .expereince .box-container .box p {
     text-align: left;
-   /* font-size: 1rem;
-    color: #eee;
-    padding: 0.5rem 1rem; ;*/
     margin-bottom: 1rem;
 }
 
 .expereince .box-container .box .box-content {
-    flex-grow: 1; /* Restore the left padding for the content */
+    flex-grow: 1;
 }
 
 .expereince .box-container .box .logo-img {
     position: absolute;
-    top: -1.5rem; left: -1.5rem;
+    top: -1.5rem;
+    left: -1.5rem;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    /*
-    margin-right: 1rem;
-    object-fit: cover;  Ensure the logo maintains its aspect ratio 
-   vertical-align: middle; */
 }
 
 .expereince .box-container .box img:hover {
-    filter: brightness(1.5); /* Adjust brightness for the glow effect */
-    transition: filter 0.5s ease; /* Smooth transition for the effect */
+    filter: brightness(1.5);
+    transition: filter 0.5s ease;
 }
+
 
 element-above {
     margin: 0;
@@ -659,6 +655,7 @@ nav .bx {
     .expereince .box-container .box .logo-img {
         margin-left: 55px;
     }
+    
     .portfolio-layer p {
     font-size: 3px;
     padding-bottom: 0;
