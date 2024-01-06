@@ -631,6 +631,9 @@ nav .bx {
 
 
 @media only screen and (max-width: 1200px) {
+
+    
+
     .expereince {
         display: flex;
         flex-direction: column;
@@ -687,7 +690,7 @@ nav .bx {
     }
     .header-text {
         margin-top: 12rem;
-        font-size: 16px;
+        font-size: 20px;
     }
     .header-text h1{
         font-size: 30px;
@@ -747,6 +750,10 @@ nav .bx {
         margin: 0 auto; /* Center the container */
     }
 
+    .expereince .sub-title {
+        margin-top: 2.5rem;
+    }
+
     .expereince .box-container .box {
         width: 100%; /* Adjust width for smaller screens */
         margin: 1vw;
@@ -788,12 +795,20 @@ nav .bx {
 
     .expereince .box-container .box { margin-bottom: 1rem; }
     
+.projectss .sub-title {
+    margin-top: -5rem;
+}
+
     .portfolio-layer p {
     font-size: 3px;
     }
 
     .contact-left {
         flex-basis: 100%;
+    }
+
+    .contact-left .sub-title {
+        margin-top: 7rem;
     }
     .contact-right {
         margin-left: 31.5rem;
