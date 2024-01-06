@@ -490,7 +490,7 @@ element-above {
 }
 
 .portfolio-layer a i {
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     color: rgb(0, 0, 0);
 }
 
@@ -682,6 +682,8 @@ nav .bx {
 
     .expereince .box-container .box { margin-bottom: .5rem; }
     
+
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -793,11 +795,19 @@ nav .bx {
         width: 100%
     }
 
-    .expereince .box-container .box { margin-bottom: 1rem; }
+    .expereince .box-container .box { margin-bottom: 2rem; }
     
 .projectss .sub-title {
     margin-top: -5rem;
 }
+
+    .portfolio-layer a {
+        font-size: 100rem;
+    }
+
+    .portfolio-layer a i {
+        font-size: 2vw;;
+    }
 
     .portfolio-layer p {
     font-size: 3px;
@@ -809,9 +819,30 @@ nav .bx {
 
     .contact-left .sub-title {
         margin-top: 7rem;
+        font-size: 4rem;
+        margin-left: 15px;
     }
+
+    .contact-left .email-line{
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    .contact-left .phone-line{
+        font-size: 1rem;
+        margin-left: 40px;
+    }
+
+    .social-icons {
+        margin-left: -60px;
+    }
+
+    .btn {
+        margin-left: -80px;
+    }
+
     .contact-right {
-        margin-left: 31.5rem;
+        margin-left: 35rem;
         flex-basis: 100%
     }
     .btnn2 {
