@@ -48,6 +48,10 @@ nav ul li a{
     position: relative;
 }
 
+nav ul li a:hover{
+    text-shadow: #E8D89E 0rem 0rem .625rem;
+}   
+
 nav ul li a::after{
     content: '';
     width: 0;
@@ -577,6 +581,7 @@ element-above {
      color: #fff;
      background-color: #E8D89E;
      border-radius: 5px;
+     border-color: #E8D89E;
      transition: 0.3s ease; 
      margin-top: 35px;
  }
