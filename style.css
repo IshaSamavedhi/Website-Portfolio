@@ -419,7 +419,7 @@ element-above {
 }
 
 .portfolio-box.un3 .portfolio-layer {
-    background: linear-gradient(rgba(0, 0, 0, .1), #11abdf); /* Color for the first child */
+    background: linear-gradient(rgba(0, 0, 0, .1), #cacfd1); /* Color for the first child */
 }
 
 .portfolio-box.un4 .portfolio-layer {
@@ -427,11 +427,11 @@ element-above {
 }
 
 .portfolio-box.un5 .portfolio-layer {
-    background: linear-gradient(rgba(0, 0, 0, .1), #e653e6); /* Color for the first child */
+    background: linear-gradient(rgba(0, 0, 0, .1), #3f76dd); /* Color for the first child */
 }
 
 .portfolio-box.un6 .portfolio-layer {
-    background: linear-gradient(rgba(0, 0, 0, .1), #e3c451); /* Color for the second child */
+    background: linear-gradient(rgba(0, 0, 0, .1), #da8fdc); /* Color for the second child */
 }
 
 .portfolio-container .portfolio-box:nth-child(1):hover .portfolio-layer {
@@ -444,7 +444,7 @@ element-above {
  }
  
  .portfolio-container .portfolio-box:nth-child(3):hover .portfolio-layer {
-     background: linear-gradient(rgba(0, 0, 0, .1), #11abdf); /* Replace #color3 with your desired color for the third box */
+     background: linear-gradient(rgba(0, 0, 0, .1), #cacfd1); /* Replace #color3 with your desired color for the third box */
  }
  
  .portfolio-container .portfolio-box:nth-child(4):hover .portfolio-layer {
@@ -452,12 +452,12 @@ element-above {
  }
  
  .portfolio-container .portfolio-box:nth-child(5):hover .portfolio-layer {
-     background: linear-gradient(rgba(0, 0, 0, .1), #e653e6); /* Replace #color3 with your desired color for the third box */
+     background: linear-gradient(rgba(0, 0, 0, .1), #3f76dd); /* Replace #color3 with your desired color for the third box */
  }
  
  .portfolio-container .portfolio-box:nth-child(6):hover .portfolio-layer {
      transform: translateY(0);
-     background: linear-gradient(rgba(0, 0, 0, .1), #e3c451); /* Replace #color3 with your desired color for the third box */
+     background: linear-gradient(rgba(0, 0, 0, .1), #da8fdc); /* Replace #color3 with your desired color for the third box */
  }
 
 
