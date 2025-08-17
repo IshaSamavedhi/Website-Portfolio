@@ -44,13 +44,12 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>My Hometown is St. Louis, MO and I'm currently a junior
-                        at Purdue University majoring in Computer Science and minoring in math, 
-                        along with a certificate in Data Science and Entrepreneurship. My coding Journey officially began when 
+                    <p> My hometown is St. Louis, MO and I'm a senior at Purdue University majoring in Computer Science with a Math minor,
+                        plus certificates in Data Science and Entrepreneurship.  My coding Journey officially began when 
                         I was exposed to Scratch.MIT in middle school and made a simple game. 
                         I realized how empowering it was to create something from scratch, no pun intended. 
                         It opened my eyes to the endless possibilities in the world of STEM. 
-                        Now, as a CS Major with multiple professional experiences, I'm continually inspired by the impact of STEM. It's not just about coding; 
+                        I'm continually inspired by the impact of STEM. It's not just about coding; 
                         it's about leveraging technology to solve real-world problems. I'm so excited to be part of a community 
                         that strives to make a meaningful impact, and I'm eager to continue pushing boundaries and contributing to a future 
                         where technology plays a crucial role in creating positive change.
@@ -120,18 +119,57 @@
     <div class="expereince">
         <h1 class="sub-title">My Professional Experience</h1>
 
+        <!-- Hover-activated waves (hidden by default) -->
+        <div id="meta-waves" class="experience-waves" aria-hidden="true">
+            <svg viewBox="0 0 2000 120" preserveAspectRatio="none">
+              <g class="wave-group">
+                <!-- dark blue -->
+                <path class="wave w1" d="M0,60 C250,20 500,100 750,60 S1250,20 1500,60 S1750,100 2000,60" />
+                <!-- light blue -->
+                <path class="wave w2" d="M0,70 C200,110 600,10 900,70 S1300,110 1600,70 S1800,10 2000,70" />
+                <!-- purple -->
+                <path class="wave w3" d="M0,50 C300,0 700,90 1000,50 S1400,0 1700,50 S1850,90 2000,50" />
+                <!-- pink -->
+                <path class="wave w4" d="M0,80 C220,40 580,120 1000,80 S1400,40 1700,80 S1900,120 2000,80" />
+              </g>
+            </svg>
+          </div>
+
+         <!-- Capital One hover waves -->
+        <div id="c1-waves" class="experience-waves" aria-hidden="true">
+            <svg viewBox="0 0 2000 120" preserveAspectRatio="none">
+            <g class="wave-group">
+                <path class="wave c1w1" d="M0,60 C250,25 500,95 750,60 S1250,25 1500,60 S1750,95 2000,60" />
+                <path class="wave c1w2" d="M0,72 C220,110 620,12 900,72 S1300,110 1600,72 S1850,12 2000,72" />
+                <path class="wave c1w3" d="M0,50 C300,0 700,90 1000,50 S1400,0 1700,50 S1850,90 2000,50" />
+                <path class="wave c1w4" d="M0,84 C200,46 600,120 1000,84 S1400,46 1700,84 S1900,120 2000,84" />
+            </g>
+            </svg>
+        </div>
+
         <div class="box-container">
+
+      <div class="box">
+        <img src="website/meta.png" class="logo-img meta-logo">
+        <span>May-August 2025</span>
+        <h3>Software Engineering Intern</h3>
+    <p style = "font-size: 1.1rem;">Meta</p>
+    <p class="description">-Built an end-to-end fullstack internal website using Hack and React to document Ads Metric Data <br>
+         -Improved debuggability and transparency for engineers by providing 200+ up and downstream data insights <br> 
+         -Created Dataswarm Pipelines using Python that automate population of database tables daily</p>
+
+    </div>
             <div class="box">
                 <a href="https://www.wayup.com/i-Financial-Services-j-Technology-Early-Internship-Program-Summer-2024-Capital-One-57066505304593/"> 
-                    <img src="website/cap.png" class="logo-img">
+                    <img src="website/cap.png" class="logo-img cap-logo">
                 </a>
                 <span>June-August 2024</span>
                 <h3>Software Engineering Intern</h3>
             <p style = "font-size: 1.1rem;">Capital One</p>
             <p class="description">
                 -Part of the Digital Payments & Innovation group, working on Paze, a new digital wallet<br>
-                -Writing Python backend code to implement automation of test cases including live API assertions of functionality
-                <br>-Managing the software development process using C1’s pipeline tooling
+                -Used C1's Test Data Management software to make debit and wallet creation and conditioning jobs 400% faster<br>
+                Wrote Python backend code to implement automation of test cases including live API assertions of functionality
                 <br>-Built a test automation suite using BDD in the QA envir. and testing in PROD
             </div>
 
@@ -154,16 +192,6 @@
             <p class="description">-Using Agile development methodology to create and connect a Dash web app to the database<br>
                 -Creating and Optimizing an application to provide a dynamic interface for pharmaceutical ML/Math models.
                 <br>-Automating the generation of graph/visualizations from data</p>
-            </div>
-
-            <div class="box">
-                <img src="website/danaher.png" class="logo-img">
-                <span>January-May 2024</span>
-                <h3>JUMP Program Fellow </h3>
-            <p style = "font-size: 1.1rem;">Danaher</p>
-            <p class="description">-Working to prepare for a future full-time career in STEM<br>
-            -Personal growth beyond the formal academic settings<br>
-            -Collaberating with real-world Danaher professionals to gain insight on corporate life</p>
             </div>
 
             <div class="box">
@@ -292,6 +320,11 @@
  </div>
 
 
+   <!-- Back to top button -->
+<button id="scrollTop" class="scroll-top" aria-label="Back to top" title="Back to top">
+    <i class='bx bx-chevron-up'></i>
+  </button>
+
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
 
@@ -377,6 +410,72 @@ aboutImage.addEventListener('click', function() {
     })
   </script>
 
+<script>
+    window.addEventListener('load', function () {
+      const titleEl   = document.querySelector('#Experience .expereince .sub-title');
+      const wavesMeta = document.getElementById('meta-waves');
+      const wavesC1   = document.getElementById('c1-waves');
+  
+      const metaLogo  = document.querySelector('.meta-logo') 
+                     || document.querySelector('#Experience .box img[src*="meta"]');
+      const capLogo   = document.querySelector('.cap-logo') 
+                     || document.querySelector('#Experience .box img[src*="cap"]');
+  
+      const metaBox = metaLogo ? metaLogo.closest('.box') : null;
+      const capBox  = capLogo  ? capLogo.closest('.box')  : null;
+  
+      if (!titleEl) return;
+  
+      // Position both bands just below the Experience title (no layout shift)
+      function positionBands() {
+        const y = titleEl.offsetTop + titleEl.offsetHeight + 8;
+        if (wavesMeta) wavesMeta.style.top = y + 'px';
+        if (wavesC1)   wavesC1.style.top   = y + 'px';
+      }
+      positionBands();
+      window.addEventListener('resize', positionBands);
+  
+      function bindHover(box, showEl, hideEl) {
+        if (!box || !showEl) return;
+        box.addEventListener('mouseenter', () => {
+          if (hideEl) hideEl.classList.remove('show');
+          showEl.classList.add('show');
+        });
+        box.addEventListener('mouseleave', () => {
+          showEl.classList.remove('show');
+        });
+      }
+  
+      bindHover(metaBox, wavesMeta, wavesC1);
+      bindHover(capBox,  wavesC1,   wavesMeta);
+    });
+  </script>
+
+<script>
+    (function () {
+      const btn = document.getElementById('scrollTop');
+      if (!btn) return;
+  
+      // Show/hide after scrolling 300px
+      function toggleBtn() {
+        if (window.scrollY > 300) btn.classList.add('show');
+        else btn.classList.remove('show');
+      }
+      window.addEventListener('scroll', toggleBtn, { passive: true });
+      toggleBtn();
+  
+      // Smooth scroll to top (respects reduced motion)
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      });
+    })();
+  </script>
+  
+  
+
+  
 
 </body>
 </html>

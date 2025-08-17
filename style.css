@@ -876,6 +876,98 @@ nav .bx {
 
 }
 
+/* The Experience wrapper is our positioning context */
+#Experience .expereince { position: relative; }
+
+/* Full-width overlay band (hidden by opacity only) */
+.experience-waves {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;                 /* JS sets exact pixel position */
+  width: 100%;
+  height: 90px;
+  pointer-events: none;
+  opacity: 0;             /* default hidden */
+  transition: opacity .25s ease;
+  z-index: 3;             /* above cards/title backgrounds */
+}
+
+/* Show state — DON'T remove this */
+.experience-waves.show { opacity: 1; }
+
+/* More solid-looking, seamless motion */
+.wave {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 4.5;              /* thicker */
+  stroke-dasharray: 40 4;         /* long dash, tiny gap */
+  vector-effect: non-scaling-stroke;
+  opacity: 1;
+  animation: dash-loop var(--spd,1.4s) linear infinite paused;
+}
+
+/* Brand colors + staggered speeds (keep/adjust as you like) */
+.w1 { stroke: #0A1A5C; --spd: 1.8s; }  /* dark blue  */
+.w2 { stroke: #4CC9F0; --spd: 1.5s; }  /* light blue */
+.w3 { stroke: #6A00F4; --spd: 1.2s; }  /* purple     */
+.w4 { stroke: #FF2E88; --spd: 1.0s; }  /* pink       */
+/* Capital One palette (adjust if you want slightly different tones) */
+.c1w1 { stroke: #082143; --spd: 1.8s; }  /* deep navy */
+.c1w2 { stroke: #0E63A3; --spd: 1.5s; }  /* medium blue */
+.c1w3 { stroke: #24B3FF; --spd: 1.2s; }  /* bright blue/cyan */
+.c1w4 { stroke: #D22630; --spd: 1.0s; }  /* capital one red */
+
+
+/* Advance by 10 full dash cycles: (40+4) * 10 = 440 */
+@keyframes dash-loop {
+  from { stroke-dashoffset: 0; }
+  to   { stroke-dashoffset: -440; }
+}
+
+/* Run animations only when the band is visible */
+.experience-waves.show .wave { animation-play-state: running; }
+
+/* Scroll-to-top button */
+.scroll-top {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #E8D89E;           /* gold */
+    color: #ffffff;                /* white icon */
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    cursor: pointer;
+    z-index: 999;                  /* above everything */
+    opacity: 0;                    /* hidden by default */
+    transform: translateY(10px) scale(.95);
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease,
+                box-shadow .25s ease, background-color .2s;
+  }
+  .scroll-top i { font-size: 28px; line-height: 1; }
+  .scroll-top:hover { background: #d8b32c; box-shadow: 0 12px 28px rgba(0,0,0,.32); }
+  .scroll-top:focus-visible { outline: 3px solid rgba(255,255,255,.9); outline-offset: 2px; }
+  
+  /* visible state */
+  .scroll-top.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+  
+  @media (max-width: 600px) {
+    .scroll-top { right: 14px; bottom: 14px; width: 48px; height: 48px; }
+    .scroll-top i { font-size: 26px; }
+  }
+  
+
+
 #msg {
     color: #ffffff;
     margin-top: 10px;
